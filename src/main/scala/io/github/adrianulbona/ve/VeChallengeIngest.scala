@@ -2,7 +2,7 @@ package io.github.adrianulbona.ve
 
 import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.apache.spark.streaming.twitter.TwitterUtils
-import org.apache.spark.streaming.{Minutes, StreamingContext}
+import org.apache.spark.streaming.{Minutes, Seconds, StreamingContext}
 import twitter4j.{GeoLocation, Place, Status}
 
 /**
@@ -28,9 +28,9 @@ object VeChallengeIngest {
 
     stream.map(extract).map(normalize).foreachRDD((batch, time) => {
       val batchDF: DataFrame = batch.toDF.cache
-      println()
       batchDF.groupBy($"country").count().toDF("country", "count").orderBy($"count".desc).show(6)
       batchDF.coalesce(1).write.parquet("tweets/batch=" + time.milliseconds)
+      batchDF.unpersist()
     })
 
     ssc.start()
