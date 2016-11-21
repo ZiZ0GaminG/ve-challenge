@@ -30,7 +30,7 @@ object VeChallenge {
 
     places.map(place => place.getCountryCode)
       .countByValue()
-      .foreachRDD(batch => printStats(batch.top(5)))
+      .foreachRDD(batch => printStats(batch.sortBy({ case (_, count) => count }, ascending = false).take(5)))
 
     ssc.start()
     ssc.awaitTermination()
