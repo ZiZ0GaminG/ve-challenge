@@ -12,7 +12,7 @@ import twitter4j.Place
 /**
   * Created by adrianulbona on 21/11/2016.
   */
-object VeChallenge {
+object VeChallengeRealTime {
 
   def main(args: Array[String]) {
 
@@ -21,7 +21,7 @@ object VeChallenge {
       .appName("ve-challenge")
       .getOrCreate()
 
-    val ssc = new StreamingContext(spark.sparkContext, Minutes(10))
+    val ssc = new StreamingContext(spark.sparkContext, Minutes(2))
     val stream = TwitterUtils.createStream(ssc, None, Seq("challenge"))
 
     val places: DStream[Place] = stream.map(status => Option(status.getPlace))
