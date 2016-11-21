@@ -21,7 +21,7 @@ object VeChallenge {
       .appName("ve-challenge")
       .getOrCreate()
 
-    val ssc = new StreamingContext(spark.sparkContext, Minutes(1))
+    val ssc = new StreamingContext(spark.sparkContext, Minutes(10))
     val stream = TwitterUtils.createStream(ssc, None, Seq("challenge"))
 
     val places: DStream[Place] = stream.map(status => Option(status.getPlace))
@@ -39,7 +39,8 @@ object VeChallenge {
   }
 
   def printStats(top5Countries: Array[(String, Long)]) {
-    println(new SimpleDateFormat("yyyy-MM-dd/HH:mm:ss").format(new Date()))
+    println()
+    println(new SimpleDateFormat("yyyy-MM-dd  HH:mm:ss").format(new Date()))
     top5Countries.foreach(println)
   }
 }
