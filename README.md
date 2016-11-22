@@ -48,7 +48,7 @@ Please detail the technologies you used in the system. You are also required to 
   - top 5 countries based from geotagged tweets
   
 
-```bash
+```
 cd tweets
 ls -l
 drwxr-xr-x  6 adrianulbona  staff  204 Nov 22 08:50 batch=1479797400000
