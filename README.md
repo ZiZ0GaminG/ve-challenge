@@ -46,7 +46,50 @@ Please detail the technologies you used in the system. You are also required to 
 **Output:** for each 2 minutes microbatch
   - one parquet file with relevant information extracted from each tweet
   - top 5 countries based from geotagged tweets
+  
 
+```bash
+cd tweets
+ls -l
+drwxr-xr-x  6 adrianulbona  staff  204 Nov 22 08:50 batch=1479797400000
+drwxr-xr-x  6 adrianulbona  staff  204 Nov 22 08:52 batch=1479797520000
+drwxr-xr-x  6 adrianulbona  staff  204 Nov 22 08:54 batch=1479797640000
+drwxr-xr-x  6 adrianulbona  staff  204 Nov 22 08:56 batch=1479797760000
+drwxr-xr-x  6 adrianulbona  staff  204 Nov 22 08:58 batch=1479797880000
+drwxr-xr-x  6 adrianulbona  staff  204 Nov 22 09:00 batch=1479798000000
+
+```
+
+```
+.....
++-------+-----+
+|country|count|
++-------+-----+
+|unknown|  218|
+|     AU|    1|
+|     ES|    1|
+|     US|    1|
++-------+-----+
+
++-------+-----+
+|country|count|
++-------+-----+
+|unknown|  243|
+|     US|    3|
+|     ID|    1|
+|     GB|    1|
++-------+-----+
+
++-------+-----+
+|country|count|
++-------+-----+
+|unknown|  238|
+|     US|    4|
+|     GB|    1|
+|     IN|    1|
++-------+-----+
+.....
+```
 
 ### Batch solution with spark dataframes and parquet files 
 
@@ -55,6 +98,18 @@ Please detail the technologies you used in the system. You are also required to 
 **Time window:** depends on how much time you've run the injestion part
 
 **Output:** top 5 countries based from geotagged
+
+For 7 x 2 minutes batches we get the following stats:
++-------+-----+
+|country|count|
++-------+-----+
+|unknown| 1660|
+|     US|   19|
+|     GB|    4|
+|     AU|    3|
+|     ES|    2|
+|     IN|    2|
++-------+-----+
 
 ## Run
 
