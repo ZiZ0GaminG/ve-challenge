@@ -99,7 +99,9 @@ drwxr-xr-x  6 adrianulbona  staff  204 Nov 22 09:00 batch=1479798000000
 
 **Output:** top 5 countries based from geotagged
 
-For 7 x 2 minutes batches we get the following stats:
+For 7 x 2 minutes batches we get the following numbers:
+
+```
 +-------+-----+
 |country|count|
 +-------+-----+
@@ -110,6 +112,7 @@ For 7 x 2 minutes batches we get the following stats:
 |     ES|    2|
 |     IN|    2|
 +-------+-----+
+```
 
 ## Run
 
