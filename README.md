@@ -9,7 +9,7 @@ Please detail the technologies you used in the system. You are also required to 
 
 ### Real-time solution with spark streaming
 
-**Code:** io.github.adrianulbona.ve.VeChallengeRealTime
+**Code:** `io.github.adrianulbona.ve.VeChallengeRealTime`
 
 **Time window:** 2 minutes (it can be easily changed - see the code)
 
@@ -18,7 +18,7 @@ Please detail the technologies you used in the system. You are also required to 
 
 ### Ingestion with spark streaming and parquet files 
 
-**Code:** io.github.adrianulbona.ve.VeChallengeIngest
+**Code:** `io.github.adrianulbona.ve.VeChallengeIngest`
 
 **Time window:** 2 minutes (it can be easily changed - see the code)
 
@@ -29,7 +29,7 @@ Please detail the technologies you used in the system. You are also required to 
 
 ### Batch solution with spark dataframes and parquet files 
 
-**Code:** io.github.adrianulbona.ve.VeChallengeBatch
+**Code:** `io.github.adrianulbona.ve.VeChallengeBatch`
 
 **Time window:** depends on how much time you've run the injestion part
 
@@ -37,4 +37,4 @@ Please detail the technologies you used in the system. You are also required to 
 
 ## Run
 
-Rename the ve-challenge/src/main/resources/twitter4j.properties.template to twitter4j.properties and add your tweeter credentials inside.
+Rename the `ve-challenge/src/main/resources/twitter4j.properties.template` to `twitter4j.properties` and add your twitter credentials inside.
