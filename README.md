@@ -5,6 +5,15 @@ Setup a system that is capable of ingesting Twitter data with the â€œchallengeâ€
 
 Please detail the technologies you used in the system. You are also required to send the code/ templates or just print-screens showing the full system integration, together with the time window that you used for the input data and the list of the resulting 5 countries.
 
+## Setup
+
+```
+org.scala-lang:scala-library:2.11.8
+org.apache.spark:spark-streaming_2.11:2.0.0
+org.apache.bahir:spark-streaming-twitter_2.11:2.0.0
+org.apache.spark:spark-sql_2.11:2.0.0
+```
+
 ## Solution
 
 ### Real-time solution with spark streaming
@@ -116,4 +125,4 @@ For 7 x 2 minutes batches we get the following numbers:
 
 ## Run
 
-Rename the `ve-challenge/src/main/resources/twitter4j.properties.template` to `twitter4j.properties` and add your twitter credentials inside.
+In `ve-challenge/src/main/resources/` rename `twitter4j.properties.template` to `twitter4j.properties` and add your twitter credentials inside.
