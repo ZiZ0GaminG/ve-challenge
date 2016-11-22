@@ -15,6 +15,27 @@ Please detail the technologies you used in the system. You are also required to 
 
 **Output:** for each 2 minutes microbatch - top 5 countries based from geotagged tweets 
 
+```
+.....
+2016-11-22  07:58:00
+(US,4)
+
+2016-11-22  08:00:00
+(AR,1)
+(US,1)
+
+2016-11-22  08:02:00
+(US,5)
+(AU,1)
+
+2016-11-22  08:04:00
+(US,6)
+(AU,1)
+(AR,1)
+(ID,1)
+.....
+```
+
 
 ### Ingestion with spark streaming and parquet files 
 
