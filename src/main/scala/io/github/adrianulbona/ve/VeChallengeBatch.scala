@@ -10,10 +10,6 @@ import twitter4j.{GeoLocation, Place, Status}
   */
 object VeChallengeBatch {
 
-  case class Location(latitude: Double, longitude: Double)
-
-  case class Tweet(time: Long, text: String, user: String, isRetweet: Boolean, country: String, location: Location)
-
   def main(args: Array[String]) {
 
     val spark = SparkSession.builder
